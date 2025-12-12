@@ -1,6 +1,8 @@
 ﻿import { useState } from 'react';
 
 function ProductCard({ product, onAddToCart }) {
+  const [imageError, setImageError] = useState(false);
+
   return (
     <div style={{
       border: '1px solid #ddd',
@@ -18,8 +20,30 @@ function ProductCard({ product, onAddToCart }) {
       e.currentTarget.style.transform = 'translateY(0)';
       e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
     }}>
-      <div style={{ backgroundColor: '#f0f0f0', height: '200px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <span style={{ fontSize: '60px' }}>{product.icon}</span>
+      <div style={{ 
+        backgroundColor: '#f0f0f0', 
+        height: '200px', 
+        display: 'flex', 
+        alignItems: 'center', 
+        justifyContent: 'center',
+        overflow: 'hidden',
+        position: 'relative'
+      }}>
+        {!imageError ? (
+          <img 
+            src={product.image} 
+            alt={product.name}
+            onError={() => setImageError(true)}
+            style={{ 
+              width: '100%', 
+              height: '100%', 
+              objectFit: 'cover',
+              transition: 'transform 0.3s'
+            }}
+          />
+        ) : (
+          <span style={{ fontSize: '60px' }}>{product.icon}</span>
+        )}
       </div>
       <div style={{ padding: '15px' }}>
         <h3 style={{ margin: '0 0 10px 0', fontSize: '18px' }}>{product.name}</h3>

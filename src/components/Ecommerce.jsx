@@ -10,14 +10,94 @@ export default function Ecommerce() {
   const [orderCompleted, setOrderCompleted] = useState(false);
 
   const products = [
-    { id: 1, name: 'Laptop Gaming', price: 12000000, description: 'Laptop performa tinggi', icon: '', category: 'elektronik', rating: 4.8, reviews: 125 },
-    { id: 2, name: 'Mouse Wireless', price: 500000, description: 'Mouse presisi tinggi', icon: '', category: 'aksesori', rating: 4.5, reviews: 89 },
-    { id: 3, name: 'Keyboard Mekanik', price: 1500000, description: 'Keyboard RGB gaming', icon: '', category: 'aksesori', rating: 4.7, reviews: 156 },
-    { id: 4, name: 'Monitor 4K', price: 3000000, description: 'Monitor ultrawide gaming', icon: '', category: 'elektronik', rating: 4.6, reviews: 94 },
-    { id: 5, name: 'Headset Gaming', price: 800000, description: 'Headset 7.1 surround', icon: '', category: 'aksesori', rating: 4.4, reviews: 120 },
-    { id: 6, name: 'SSD 1TB', price: 1200000, description: 'NVMe SSD ultra cepat', icon: '', category: 'storage', rating: 4.9, reviews: 210 },
-    { id: 7, name: 'RAM 16GB', price: 900000, description: 'DDR4 Gaming RGB', icon: '', category: 'hardware', rating: 4.7, reviews: 167 },
-    { id: 8, name: 'Cooling Fan', price: 350000, description: 'RGB cooling system', icon: '', category: 'hardware', rating: 4.3, reviews: 78 }
+    { 
+      id: 1, 
+      name: 'Laptop Gaming ASUS', 
+      price: 12000000, 
+      description: 'RTX 4060, i7-13th Gen', 
+      image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400&h=400&fit=crop',
+      icon: '', 
+      category: 'elektronik', 
+      rating: 4.8, 
+      reviews: 125 
+    },
+    { 
+      id: 2, 
+      name: 'Mouse Wireless Logitech', 
+      price: 500000, 
+      description: 'DPI tinggi, presisi akurat', 
+      image: 'https://images.unsplash.com/photo-1527814050087-3793815479db?w=400&h=400&fit=crop',
+      icon: '', 
+      category: 'aksesori', 
+      rating: 4.5, 
+      reviews: 89 
+    },
+    { 
+      id: 3, 
+      name: 'Keyboard Mekanik RGB', 
+      price: 1500000, 
+      description: 'Blue Switch, LED backlight', 
+      image: 'https://images.unsplash.com/photo-1587829191301-42b351e9d86e?w=400&h=400&fit=crop',
+      icon: '', 
+      category: 'aksesori', 
+      rating: 4.7, 
+      reviews: 156 
+    },
+    { 
+      id: 4, 
+      name: 'Monitor Ultrawide 4K', 
+      price: 3000000, 
+      description: '34\" Gaming monitor', 
+      image: 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400&h=400&fit=crop',
+      icon: '', 
+      category: 'elektronik', 
+      rating: 4.6, 
+      reviews: 94 
+    },
+    { 
+      id: 5, 
+      name: 'Headset Gaming SteelSeries', 
+      price: 800000, 
+      description: '7.1 Surround sound', 
+      image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop',
+      icon: '', 
+      category: 'aksesori', 
+      rating: 4.4, 
+      reviews: 120 
+    },
+    { 
+      id: 6, 
+      name: 'SSD NVMe 1TB', 
+      price: 1200000, 
+      description: 'Read 7000MB/s ultra cepat', 
+      image: 'https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=400&h=400&fit=crop',
+      icon: '', 
+      category: 'storage', 
+      rating: 4.9, 
+      reviews: 210 
+    },
+    { 
+      id: 7, 
+      name: 'RAM DDR4 16GB', 
+      price: 900000, 
+      description: '3600MHz Gaming RGB', 
+      image: 'https://images.unsplash.com/photo-1591290621225-4ba02a153e97?w=400&h=400&fit=crop',
+      icon: '', 
+      category: 'hardware', 
+      rating: 4.7, 
+      reviews: 167 
+    },
+    { 
+      id: 8, 
+      name: 'CPU Cooler RGB', 
+      price: 350000, 
+      description: 'Liquid cooling system', 
+      image: 'https://images.unsplash.com/photo-1587829191301-42b351e9d86e?w=400&h=400&fit=crop',
+      icon: '', 
+      category: 'hardware', 
+      rating: 4.3, 
+      reviews: 78 
+    }
   ];
 
   const categories = ['all', 'elektronik', 'aksesori', 'storage', 'hardware'];
@@ -64,8 +144,8 @@ export default function Ecommerce() {
   return (
     <div style={{ padding: '20px', maxWidth: '1200px', margin: '0 auto' }}>
       <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-        <h1 style={{ fontSize: '32px', color: '#333', margin: '0 0 10px 0' }}> Toko Online</h1>
-        <p style={{ color: '#666', margin: '0' }}>Belanja produk elektronik dan aksesori gaming terbaik</p>
+        <h1 style={{ fontSize: '32px', color: '#333', margin: '0 0 10px 0' }}> Toko Online Gaming</h1>
+        <p style={{ color: '#666', margin: '0' }}>Belanja produk elektronik dan aksesori gaming terbaik dengan harga terjangkau</p>
       </div>
 
       {orderCompleted && (
